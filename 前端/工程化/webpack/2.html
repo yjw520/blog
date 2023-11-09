@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack的配置 | yjw的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/myLearn/img/老虎.png">
+    <meta name="description" content="专注 前端 技术栈分享，从前端到Node.js再到数据库">
+    
+    <link rel="preload" href="/myLearn/assets/css/0.styles.4942d648.css" as="style"><link rel="preload" href="/myLearn/assets/js/app.97ca97de.js" as="script"><link rel="preload" href="/myLearn/assets/js/2.0ad2118b.js" as="script"><link rel="preload" href="/myLearn/assets/js/36.94b2a513.js" as="script"><link rel="prefetch" href="/myLearn/assets/js/10.3bdec451.js"><link rel="prefetch" href="/myLearn/assets/js/11.5c446b5c.js"><link rel="prefetch" href="/myLearn/assets/js/12.3339d4d5.js"><link rel="prefetch" href="/myLearn/assets/js/13.7139bf0f.js"><link rel="prefetch" href="/myLearn/assets/js/14.768138ec.js"><link rel="prefetch" href="/myLearn/assets/js/15.8c89667e.js"><link rel="prefetch" href="/myLearn/assets/js/16.9c33da7c.js"><link rel="prefetch" href="/myLearn/assets/js/17.facccbad.js"><link rel="prefetch" href="/myLearn/assets/js/18.580c41a4.js"><link rel="prefetch" href="/myLearn/assets/js/19.4b0f0079.js"><link rel="prefetch" href="/myLearn/assets/js/20.7721a5e3.js"><link rel="prefetch" href="/myLearn/assets/js/21.4eb97902.js"><link rel="prefetch" href="/myLearn/assets/js/22.b0ebb404.js"><link rel="prefetch" href="/myLearn/assets/js/23.bb401867.js"><link rel="prefetch" href="/myLearn/assets/js/24.13d0b8bd.js"><link rel="prefetch" href="/myLearn/assets/js/25.e1856d48.js"><link rel="prefetch" href="/myLearn/assets/js/26.83673e38.js"><link rel="prefetch" href="/myLearn/assets/js/27.83471336.js"><link rel="prefetch" href="/myLearn/assets/js/28.d497ce4a.js"><link rel="prefetch" href="/myLearn/assets/js/29.a6bb537c.js"><link rel="prefetch" href="/myLearn/assets/js/3.1ce12462.js"><link rel="prefetch" href="/myLearn/assets/js/30.c60dde42.js"><link rel="prefetch" href="/myLearn/assets/js/31.71d86ac3.js"><link rel="prefetch" href="/myLearn/assets/js/32.71cbf13f.js"><link rel="prefetch" href="/myLearn/assets/js/33.ffd9210c.js"><link rel="prefetch" href="/myLearn/assets/js/34.c1db201c.js"><link rel="prefetch" href="/myLearn/assets/js/35.6493af10.js"><link rel="prefetch" href="/myLearn/assets/js/37.adc57b7b.js"><link rel="prefetch" href="/myLearn/assets/js/38.ad7b093c.js"><link rel="prefetch" href="/myLearn/assets/js/39.028052d5.js"><link rel="prefetch" href="/myLearn/assets/js/4.6191a5af.js"><link rel="prefetch" href="/myLearn/assets/js/40.0141a2ff.js"><link rel="prefetch" href="/myLearn/assets/js/41.ac841896.js"><link rel="prefetch" href="/myLearn/assets/js/42.e54ff04c.js"><link rel="prefetch" href="/myLearn/assets/js/43.316b6168.js"><link rel="prefetch" href="/myLearn/assets/js/44.8117b137.js"><link rel="prefetch" href="/myLearn/assets/js/45.23f4728e.js"><link rel="prefetch" href="/myLearn/assets/js/5.272231b9.js"><link rel="prefetch" href="/myLearn/assets/js/6.23ed1ad7.js"><link rel="prefetch" href="/myLearn/assets/js/7.e54adb28.js"><link rel="prefetch" href="/myLearn/assets/js/8.38525ea4.js"><link rel="prefetch" href="/myLearn/assets/js/9.56db03e5.js">
+    <link rel="stylesheet" href="/myLearn/assets/css/0.styles.4942d648.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myLearn/" class="home-link router-link-active"><!----> <span class="site-name">yjw的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myLearn/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myLearn/前端/html/1.html" class="nav-link">
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/前端/css/1.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/前端/JavaScript/开始.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><a href="/myLearn/前端/database/1.html" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于作者" class="dropdown-title"><span class="title">关于作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于作者" class="mobile-dropdown-title"><span class="title">关于作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myLearn/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack/.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack/.html" class="nav-link">
+  gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/3800355554473726/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myLearn/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myLearn/前端/html/1.html" class="nav-link">
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/前端/css/1.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/前端/JavaScript/开始.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><a href="/myLearn/前端/database/1.html" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于作者" class="dropdown-title"><span class="title">关于作者</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于作者" class="mobile-dropdown-title"><span class="title">关于作者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myLearn/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack/.html" class="nav-link">
+  github
+</a></li><li class="dropdown-item"><!----> <a href="/myLearn/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/webpack/.html" class="nav-link">
+  gitee
+</a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/3800355554473726/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>html</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>webpack</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myLearn/前端/工程化/webpack/1.html" class="sidebar-link">初识webpack</a></li><li><a href="/myLearn/前端/工程化/webpack/2.html" class="active sidebar-link">loader介绍</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myLearn/前端/工程化/webpack/3.html" class="sidebar-link">加载和处理其他资源</a></li><li><a href="/myLearn/前端/工程化/webpack/4.html" class="sidebar-link">plugin介绍</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>计算机与网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="webpack的配置"><a href="#webpack的配置" class="header-anchor">#</a> webpack的配置</h3> <hr> <p><a href="https://webpack.docschina.org/concepts/loaders/" target="_blank" rel="noopener noreferrer">webpack文档loder模块<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h4 id="一、webpack默认打包"><a href="#一、webpack默认打包" class="header-anchor">#</a> 一、webpack默认打包</h4> <ul><li>我们可以通过webpack进行打包，之后运行打包之后的代码
+<ul><li>在目录下直接执行webpack命令</li></ul></li> <li>生成一个dist文件夹，里面存放一个 main.js 的文件，就是我们打包之后的文件：
+<ul><li>这个文件中的代码被压缩和丑化了</li> <li>我们会发现代码中依然存在ES6之前的语法，比如箭头函数、const等，这是因为默认情况喜爱webpack并不清楚我们打包是否需要转成ES5之前的语法，后续我们需要通过babel来进行转换和设置</li></ul></li> <li>webpack是如何确定入口的呢
+<ul><li>事实上，当我们运行webpack时，webpack会查找当前目录下的 src/index.js 作为入口</li> <li>所以，如果当前项目中没有存在 src/index.js 文件，那么会报错</li></ul></li> <li>可以通过命令来指定入口和出口 <code>npx webpack --entry ./src/main.js --output-path ./build</code></li> <li>webpack 配置文件，webpack.config.js</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>const path = reuire('path);
+
+// 导出配置信息
+module.exports = {
+    entry: &quot;./src/main.js&quot;,
+    output: {
+        filename: &quot;bundle.js&quot;,
+        path: path.resolve(__dirname, &quot;./dist&quot;),
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>如果配置文件名不叫 webpack.config.js，叫 wk.config.js
+可以增加脚本来执行 <code>&quot;build&quot;: webpack --config wk.config.js</code></li></ul> <h4 id="二、loader的介绍以及使用"><a href="#二、loader的介绍以及使用" class="header-anchor">#</a> 二、loader的介绍以及使用</h4> <h5 id="_1-loader的介绍"><a href="#_1-loader的介绍" class="header-anchor">#</a> 1. loader的介绍</h5> <ul><li>loader是什么
+<ul><li>loader 可以用于对模块的源代码进行转换</li> <li>我们可以将css文件也看成是一个模块，我们是通过import来加载这些模块的</li> <li>在加载这些模块时，webpack其实并不知道如何对其进行加载，我们必须制定对应的loader来完成这个功能</li></ul></li> <li>拿css来举个例子，我们需要什么样的loader
+<ul><li>对于加载css文件来说，我们需要一个可以读取css文件的loader</li> <li>最常用的是css-loader</li></ul></li></ul> <h5 id="_2-loader使用-css-loader"><a href="#_2-loader使用-css-loader" class="header-anchor">#</a> 2. loader使用（css-loader）</h5> <ul><li>如何使用这个loader来加载css文件呢？有三种方式
+<ul><li>内联方式
+<ul><li>在引入的样式前加上使用的loader，并且使用!分割
+<code>import &quot;style-loader!css-loader!../css/style.css&quot;;</code></li></ul></li> <li>CLI方式（webpack5不再使用）
+<ul><li>在webpack5的文档中已经没有了 <code>--module-bind</code></li> <li>实际应用中也比较少，因为不方便管理</li></ul></li> <li>配置方式
+<ul><li>就是在我们的webpack.config.js文件中写明配置信息</li> <li>这种方式可以有更好的表示loader的配置，也方便后期的维护，同时也让你对各个loader有一个全局的概览</li></ul></li></ul></li></ul> <h5 id="_3-loader配置方式"><a href="#_3-loader配置方式" class="header-anchor">#</a> 3. loader配置方式</h5> <ul><li>配置方式表示的意思是在我们的<code>webpack.config.js</code>文件中写明配置信息
+<ul><li>module.rules中允许我们配置多个loader（因为我们也会继续使用其他的loader，来完成其他文件的加载）</li></ul></li> <li><strong>moduele.rules的配置如下：</strong> <ul><li>rules属性对应的值是一个数组：[Rule]</li> <li>数组中存放的是一个个的Rule，Rule是一个对象，对象可以设置多个属性
+<ul><li>test属性：用于对 resource（资源）进行匹配的，通常会设置成正则表达式</li> <li>use属性：对应的值是一个数组：[useEntry]
+<ul><li>UseEntry是一个对象，可以通过对象的属性来设置一些其他属性
+<ul><li>loader：必须有一个loader属性，对应的值是一个字符串</li> <li>options：可选的属性，值是一个字符串或者对象，值会被传入到loader中</li> <li>query：目前已经使用options来替代</li></ul></li></ul></li> <li>loader 属性：Rule.use: [{ loader }] 的简写</li></ul></li></ul></li> <li>loader的配置代码示例</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 导出配置信息
+module.exports = {
+    mode: &quot;development&quot;,
+    entry: &quot;./src/main.js&quot;,
+    output: {
+        filename: &quot;bundle.js&quot;,
+        path: path.resolve(__dirname, &quot;./dist&quot;)
+    },
+    module: {
+        rules: [
+            {
+                // 使用正则表达式
+                test: /\.css$/,
+                // loader: &quot;css-loader&quot;,  // 写法一
+                // use: [&quot;css-loader&quot;], // 写法二
+                // 写法三
+                use: [
+                    // 从右往左
+                    // &quot;css-loader&quot;
+                    { loader: &quot;style-loader&quot; },
+                    { loader: &quot;css-loader&quot;， options: {} },
+                ]
+            }
+        ]
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h6 id="_4-style-loader"><a href="#_4-style-loader" class="header-anchor">#</a> 4. style-loader</h6> <ul><li>我们已经可以通过css-loader来加载css文件了
+<ul><li>但是你会发现这个css在我们的代码中并没有生效（页面没有效果）</li></ul></li> <li>这是为啥？
+<ul><li>因为css-loader只是负责将.css文件进行解析，并不会将解析之后的css插入到页面中</li> <li>如果我们希望在完成插入style的操作，那么我们还需要另外一个loader，就是style-loader</li></ul></li> <li>其他的loader：less-loader</li></ul> <h4 id="三、题外话"><a href="#三、题外话" class="header-anchor">#</a> 三、题外话</h4> <ul><li>less =&gt; css =&gt; style<br>
+可以通过安装<code>less</code>来直接转化
+less目录下有一个lessc
+命令示例<code>npx less ./src/css/component.less &gt; component.css</code></li></ul> <h4 id="四、浏览器的兼容性-指针对不同的浏览器支持的特性-比如css特性、js语法-之间的兼容性"><a href="#四、浏览器的兼容性-指针对不同的浏览器支持的特性-比如css特性、js语法-之间的兼容性" class="header-anchor">#</a> 四、浏览器的兼容性（指针对不同的浏览器支持的特性：比如css特性、js语法，之间的兼容性）</h4> <h5 id="_1-浏览器市场的占有率"><a href="#_1-浏览器市场的占有率" class="header-anchor">#</a> 1. 浏览器市场的占有率</h5> <ul><li>我们如何可以在css兼容性和js兼容性下共享我们配置的兼容性条件呢?
+<ul><li>browserslist 工具</li> <li>Browserslist是什么?Browserslist是一个在不同的前端工具之间，共享目标浏览器和Node.js版本的配置</li> <li>Autoprefixer</li> <li>Babel</li> <li>postcss-preset-env</li> <li>eslint-plugin-compat</li> <li>stylelint-no-unsupported-browser-features p postcss-normalize</li> <li>obsolete-webpack-plugin</li></ul></li> <li>我们可以编写蕾丝这样的配置<div class="language- line-numbers-mode"><pre class="language-text"><code>  &gt; 1%
+  last 2 versions
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li>caniuse 数据支持</li></ul> <ul><li>条件查询使用的是caniuse-lite的工具，这个工具的数据来自于caniuse的网站上</li></ul> <ul><li><p>Browserlist 编写规则</p></li> <li><p>defaults:Browserslist的默认浏览器(&gt; 0.5%, last 2 versions, Firefox ESR, not dead)。</p></li> <li><p>5%:通过全局使用情况统计信息选择的浏览器版本。 &gt;=，&lt;和&lt;=工作过。</p> <ul><li>5% in US:使用美国使用情况统计信息。它接受两个字母的国家/地区代码。</li> <li><blockquote><p>5% in alt-AS:使用亚洲地区使用情况统计信息。有关所有区域代码的列表，请参见caniuse-lite/data/regions</p></blockquote></li> <li><blockquote><p>5% in my stats:使用自定义用法数据。</p></blockquote></li> <li><blockquote><p>5% in browserslist-config-mycompany stats:使用 来自的自定义使用情况数据browserslist-config-mycompany/browserslist-stats.json。 p cover 99.5%:提供覆盖率的最受欢迎的浏览器。</p></blockquote></li> <li>cover 99.5% in US:与上述相同，但国家/地区代码由两个字母组成。</li> <li>cover 99.5% in my stats:使用自定义用法数据。</li></ul></li> <li><p>dead:24个月内没有官方支持或更新的浏览器。现在是IE 10，IE_Mob 11，BlackBerry 10，BlackBerry 7， Samsung 4和OperaMobile 12.1。</p></li> <li><p>last 2 versions:每个浏览器的最后2个版本。</p> <ul><li>last 2 Chrome versions:最近2个版本的Chrome浏览器。</li> <li>last 2 major versions或last 2 iOS major versions:最近2个主要版本的所有次要/补丁版本。</li></ul></li> <li><p>node 10和node 10.4:选择最新的Node.js10.x.x 或10.4.x版本。</p> <ul><li>current node:Browserslist现在使用的Node.js版本。</li> <li>maintained node versions:所有Node.js版本，仍由 Node.js Foundation维护。</li></ul></li> <li><p>iOS 7:直接使用iOS浏览器版本7。</p> <ul><li>Firefox &gt; 20:Firefox的版本高于20 &gt;=，&lt;并且&lt;=也可以使用。它也可以与Node.js一起使用。</li> <li>ie 6-8:选择一个包含范围的版本。</li> <li>Firefox ESR:最新的[Firefox ESR]版本。</li> <li>PhantomJS 2.1和PhantomJS 1.9:选择类似于PhantomJS运行时的Safari版本。</li></ul></li> <li><p>extends browserslist-config-mycompany:从browserslist-config-mycompanynpm包中查询 。</p></li> <li><p>supports es6-module:支持特定功能的浏览器。 es6-module这是“我可以使用” 页面feat的URL上的参数。有关所有可用功能的列表，请参见 。caniuse-
+lite/data/features</p></li> <li><p>browserslist config:在Browserslist配置中定义的浏览器。在差异服务中很有用，可用于修改用户的配置，例如 browserslist config and supports es6-module。</p></li> <li><p>since 2015或last 2 years:自2015年以来发布的所有版本(since 2015-03以及since 2015-03-10)。</p></li> <li><p>unreleased versions或unreleased Chrome versions:Alpha和Beta版本。</p></li> <li><p>not ie &lt;= 8:排除先前查询选择的浏览器。</p></li> <li><p>autoprefiexer（传统的加前缀的方式）</p></li></ul> <h5 id="_2-postcss-loader"><a href="#_2-postcss-loader" class="header-anchor">#</a> 2. postcss-loader</h5> <ol><li>postcss</li></ol> <ul><li>什么是PostCSS呢？
+<ul><li>PostCSS是一个通过JavaScript来转换样式的工具；</li> <li>这个工具可以帮助我们进行一些CSS的转换和适配，比如自动添加浏览器前缀、css样式的重置；</li> <li>但是实现这些工具，我们需要借助于PostCSS对应的插件；</li></ul></li> <li>如何使用PostCSS呢？
+<ul><li>主要就是两个步骤：</li></ul> <ul><li>第一步：查找PostCSS在构建工具中的扩展，比如webpack中的postcss-loader；</li> <li>第二步：选择可以添加你需要的PostCSS相关的插件；</li></ul></li></ul> <ol start="2"><li>postcss-loader&amp;postcss-preset-env</li></ol> <ul><li>postcss-preset-env可以帮我们将一些现代的css特性，转成大多数浏览器认识的css，并且根据目标浏览器或者运行时环境添加所需要的polyfill</li> <li>也包括自动帮助我们添加autoprefixer</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install --save-dev postcss-loader postcss
+
+这样配置
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      // 其他选项
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+或
+postcss.config.js
+module.exports = {
+  plugins: [
+    [
+      &quot;postcss-preset-env&quot;,
+      {
+        ...
+      }
+    ]
+  ]
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><blockquote><p>补充：在js中通过import style from './a.css'。而在a.css中又通过@import('./b.css')引入另一css文件
+这时候a.css通过以上loader的处理，会做经过postcss-loader处理
+但是b.css没有经过postcss-loader处理，这是因为当处理a.css  中 @import时，已经来到了css-loader 无法再返回了
+这时候要返回去让b.css也要经过postcs-loader处理，我们应该怎么做呢</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+ loader: &quot;css-loader&quot;,
+ options: {
+   importLoaders: 1  // 跟后面有几个loader有关
+ }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">10/18/2023, 12:03:52 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myLearn/前端/工程化/webpack/1.html" class="prev">
+        初识webpack
+      </a></span> <span class="next"><a href="/myLearn/前端/工程化/webpack/3.html">
+        加载和处理其他资源
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/myLearn/assets/js/app.97ca97de.js" defer></script><script src="/myLearn/assets/js/2.0ad2118b.js" defer></script><script src="/myLearn/assets/js/36.94b2a513.js" defer></script>
+  </body>
+</html>
